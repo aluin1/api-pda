@@ -1,0 +1,887 @@
+{
+	"info": {
+		"_postman_id": "cad80ce3-3f1b-483c-9af2-02857713069d",
+		"name": "STA-Attendance Digital",
+		"description": "JSON for testing REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users register | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"password\" : \"faisal\",\n\t\"full_name\" : \"Faisal Budiman\",\n\t\"role\" : \"admin\",\n\t\"nohp\" : \"081299762129\",\n\t\"email\" : \"faisal@gmail.com\",\n\t\"title\" : \"programmer\",\n\t\"status\" : \"inactive\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/users/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"users",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users login | admin, client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"password\" : \"faisal\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/users/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users All | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"limit\" : null,\n\t\"page\" : null,\n\t\"search\" : null,\n\t\"order_by\" : null,\n\t\"sort\" : null\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/users/all/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"users",
+						"all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users list | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/users/list/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"users",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users detail | admin, client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI2IDE2OjMxOjE1IiwidGltZSI6MTU1MzU5MjY3NX0.viJyyasEh4kuMMgyZBpDH4IDo5bFxr4zwzzAAd_YliQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/users/detail/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"users",
+						"detail",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users profile | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAzOSwidXNlcm5hbWUiOiJiYWd1cyIsInJvbGUiOiJhZG1pbiIsImZ1bGxfbmFtZSI6IkJhZ3VzIiwidGltZV9sb2dpbiI6IjIwMTktMDMtMzEgMTk6MjA6MTEiLCJ0aW1lIjoxNTU0MDM0ODExfQ.c95idP5oPVqazcH7Hhm5vpyrxCSTlxH9XxLQ_71PklA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_user\" : 17\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/users/profile_user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"users",
+						"profile_user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users Update | admin, client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiTXVoYW1tYWQgRmFpc2FsIEJ1ZGltYW4iLCJ0aW1lX2xvZ2luIjoiMjAxOS0wMy0yNSAxMzo0MTo0NiIsInRpbWUiOjE1NTM0OTYxMDZ9.zOwj0G95MJ7Sfd-OmROloFaPMoDTNkVNZMuXTdk3bN4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"diana\",\n\t\"password\" : \"diana\",\n\t\"role\" : \"user\",\n\t\"full_name\" : \"Diana Sari\",\n\t\"nohp\" : \"081299762129\",\n\t\"email\" : \"diana@gmail.com\",\n\t\"title\" : \"programmer\",\n\t\"status\" : \"active\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/users/update/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"users",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users delete | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI3IDA5OjM2OjM0IiwidGltZSI6MTU1MzY1NDE5NH0.Nl-G_RCcknFxEMYUUrdTOl6E34FbKQucz7Y0Ybvod30",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"udin\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/users/delete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"users",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attendance All | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI3IDEzOjMyOjU1IiwidGltZSI6MTU1MzY2ODM3NX0.koa0gDCISHT_3GUVjmzHetG2efoKJNB292Q391fzBS0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"limit\" : null,\n\t\"page\" : null,\n\t\"search\" : null,\n\t\"order_by\" : null,\n\t\"sort\" : null\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/attendance/attend_all/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"attendance",
+						"attend_all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attendance personal | client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI3IDE3OjMyOjM1IiwidGltZSI6MTU1MzY4Mjc1NX0.25zcpd8pfHnCJHAHFuqIdKQz3h3T9rte3InS8G2ReHQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"from\" : null,\n\t\"to\" : null,\n\t\"limit\" : null,\n\t\"page\" : null,\n\t\"search\" : null,\n\t\"order_by\" : null,\n\t\"sort\" : null\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/attendance/attend_personal/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"attendance",
+						"attend_personal",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attendance delete | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI3IDE3OjMyOjM1IiwidGltZSI6MTU1MzY4Mjc1NX0.25zcpd8pfHnCJHAHFuqIdKQz3h3T9rte3InS8G2ReHQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"Id\" : 1021\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/attendance/delete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"attendance",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attendance set  | client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI3IDEzOjMyOjU1IiwidGltZSI6MTU1MzY2ODM3NX0.koa0gDCISHT_3GUVjmzHetG2efoKJNB292Q391fzBS0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"condition\" : \"come\",\n\t\"note\" : null\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/attendance/attend/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"attendance",
+						"attend",
+						""
+					]
+				},
+				"description": "absensi"
+			},
+			"response": []
+		},
+		{
+			"name": "Attendance export pdf | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiTXVoYW1tYWQgRmFpc2FsIEJ1ZGltYW4iLCJ0aW1lX2xvZ2luIjoiMjAxOS0wMy0yOSAxMzowNjo1NyIsInRpbWUiOjE1NTM4Mzk2MTd9.VD5ng8Ty_zejUlA95MOxI_qhGIBKY_oej3G8O-Kz970",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"from\" : \"2018-01-27\",\n\t\"to\" : \"2019-03-28\",\n\t\"id_user\" : null\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/generate/export_pdf/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"generate",
+						"export_pdf",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attendance export excel | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"from\" : null,\n\t\"to\" : null\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/attendance/export_excel/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"attendance",
+						"export_excel",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logging set | client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI3IDEzOjMyOjU1IiwidGltZSI6MTU1MzY2ODM3NX0.koa0gDCISHT_3GUVjmzHetG2efoKJNB292Q391fzBS0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"longitude\" : 106.7477563,\n\t\"latitude\" : -6.3876732\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/log/logging/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"log",
+						"logging",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logging All | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI3IDEzOjMyOjU1IiwidGltZSI6MTU1MzY2ODM3NX0.koa0gDCISHT_3GUVjmzHetG2efoKJNB292Q391fzBS0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"from\" : null,\n\t\"to\" : null,\n\t\"limit\" : null,\n\t\"page\" : null,\n\t\"search\" : null,\n\t\"order_by\" : null,\n\t\"sort\" : null\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/log/get_logging/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"log",
+						"get_logging",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logging personal | client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI3IDE3OjMyOjM1IiwidGltZSI6MTU1MzY4Mjc1NX0.25zcpd8pfHnCJHAHFuqIdKQz3h3T9rte3InS8G2ReHQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"date\" : null,\n\t\"limit\" : null,\n\t\"page\" : null,\n\t\"search\" : null,\n\t\"order_by\" : null,\n\t\"sort\" : null\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/log/get_logging_personal/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"log",
+						"get_logging_personal",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logging delete | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI3IDEzOjMyOjU1IiwidGltZSI6MTU1MzY2ODM3NX0.koa0gDCISHT_3GUVjmzHetG2efoKJNB292Q391fzBS0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"Id\" : 163\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/log/delete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"log",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Office default edit | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI2IDEzOjQ1OjE5IiwidGltZSI6MTU1MzU4MjcxOX0.Y-esluR6R9Wf1epOrwIQYdM-KmkwYNrTmS5Q3yaSRcc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"office_name\" : \"STA Sudirman\",\n\t\"longitude\" : 106.818388,\n\t\"latitude\" : -6.2088966\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/office_location/edit_office_default/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"office_location",
+						"edit_office_default",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Office default detail | admin, client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI2IDEzOjQ1OjE5IiwidGltZSI6MTU1MzU4MjcxOX0.Y-esluR6R9Wf1epOrwIQYdM-KmkwYNrTmS5Q3yaSRcc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/office_location/detail_office_default/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"office_location",
+						"detail_office_default",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Office personal set | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"udin\",\n\t\"office_name\" : \"PT Solman (Citylofts)\",\n\t\"longitude\" : 106.818388,\n\t\"latitude\" : -6.2088966\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/office_location/set_office/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"office_location",
+						"set_office",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Office personal edit | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI2IDEzOjQ1OjE5IiwidGltZSI6MTU1MzU4MjcxOX0.Y-esluR6R9Wf1epOrwIQYdM-KmkwYNrTmS5Q3yaSRcc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"office_name\" : \"STA Sudirman\",\n\t\"longitude\" : 106.7713178,\n\t\"latitude\" : -6.4066308\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/office_location/edit_office/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"office_location",
+						"edit_office",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Office all get | admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI2IDEzOjQ1OjE5IiwidGltZSI6MTU1MzU4MjcxOX0.Y-esluR6R9Wf1epOrwIQYdM-KmkwYNrTmS5Q3yaSRcc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\",\n\t\"limit\" : null,\n\t\"page\" : null,\n\t\"search\" : null,\n\t\"order_by\" : null,\n\t\"sort\" : null\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/office_location/get_office_all/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"office_location",
+						"get_office_all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Office personal get | client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcsInVzZXJuYW1lIjoiZmFpc2FsIiwicm9sZSI6ImFkbWluIiwiZnVsbF9uYW1lIjoiQXdhbHVkaW4gZG9uZyIsInRpbWVfbG9naW4iOiIyMDE5LTAzLTI2IDEzOjQ1OjE5IiwidGltZSI6MTU1MzU4MjcxOX0.Y-esluR6R9Wf1epOrwIQYdM-KmkwYNrTmS5Q3yaSRcc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"faisal\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/digital-attendance-api/office_location/get_office_personal/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-attendance-api",
+						"office_location",
+						"get_office_personal",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

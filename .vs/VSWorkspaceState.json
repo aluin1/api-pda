@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\application",
+    "\\application\\controllers",
+    "\\system\\language\\english",
+    "\\system\\libraries",
+    "\\user_guide\\helpers",
+    "\\user_guide\\libraries"
+  ],
+  "SelectedNode": "\\application\\controllers\\Attendance.php",
+  "PreviewInSolutionExplorer": false
+}
