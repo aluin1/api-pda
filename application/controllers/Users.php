@@ -16,7 +16,6 @@ class Users extends REST_Controller {
 	}
 
 	 
-
 	/**
 		* User Login API
 		* @method : POST
@@ -93,11 +92,9 @@ class Users extends REST_Controller {
 $modul="Login";
 $action="Sukses Login";
 $appname="Digital Absensi Pekerja PEPC";
-
  if($cekdatauser!=""){
 $this->User_model->insert_LogUsman($username,$modul, $action, $appname);						
  }	
- 
 			  
 				 $user_token = $this->authorization_token->GenerateToken($token_data);
 

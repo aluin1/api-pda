@@ -35,10 +35,10 @@ $db['default'] = array(
 
 $db['sqlserver'] = array(
 	'dsn'	=> '',
-	'hostname' => '10.3.30.47',
-	'username' => 'sqlprodadmin',
-	'password' => 'pepcprodadmin',
-	'database' => 'DB_DigitalAttendanceSystem',
+	'hostname' => 'localhost',
+	'username' => 'sa',
+	'password' => 'Budi01man',
+	'database' => 'STA_attendance',
 
 	'dbdriver' => 'sqlsrv',
 	'dbprefix' => '',
@@ -60,10 +60,10 @@ $db['sqlserver'] = array(
 
 $db['production'] = array(
 	'dsn'	=> '',
-	'hostname' => '10.3.30.47',
+	'hostname' => '10.3.30.59',
 	'port' => 1433,
-	'username' => 'sqlprodadmin',
-	'password' => 'pepcprodadmin',
+	'username' => 'sqldevadmin',
+	'password' => 'pepcdevadmin',
 	'database' => 'DB_DigitalAttendanceSystem',
 	'dbdriver' => 'sqlsrv',
 	'dbprefix' => '',
